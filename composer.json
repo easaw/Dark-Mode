@@ -1,0 +1,38 @@
+{
+	"name": "danieltj27/Dark-Mode",
+	"type": "wordpress-plugin",
+	"description": "WordPress plugin to lets your users make the WordPress admin dashboard darker.",
+	"keywords": [
+		"wordpress",
+		"dark-mode"
+	],
+	"homepage": "https://github.com/danieltj27/Dark-Mode",
+	"license": "GPL-2.0-or-later",
+	"authors": [
+		{
+			"name": "Daniel James",
+			"homepage": "https://www.danieltj.co.uk/",
+			"role": "Developer"
+		}
+	],
+	"require": {
+		"php": ">=5.4",
+		"composer/installers": "^1"
+	},
+	"require-dev": {
+		"dealerdirect/phpcodesniffer-composer-installer": "^0.4.4",
+		"phpcompatibility/phpcompatibility-wp": "^1",
+		"roave/security-advisories": "dev-master",
+		"squizlabs/php_codesniffer": "^3.3",
+		"wp-coding-standards/wpcs": "^1"
+	},
+	"config": {
+		"sort-packages": true
+	},
+	"minimum-stability": "dev",
+	"prefer-stable": true,
+	"support": {
+		"issues": "https://github.com/danieltj27/Dark-Mode/issues",
+		"source": "https://github.com/danieltj27/Dark-Mode"
+	}
+}
