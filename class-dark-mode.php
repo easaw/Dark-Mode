@@ -1,9 +1,4 @@
 <?php
-/**
- * The core Dark Mode class.
- *
- * @package danieltj27/Dark-Mode
- */
 
 /**
  * The core Dark Mode class.

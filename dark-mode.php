@@ -1,6 +1,6 @@
 <?php
 /**
- * Dark Mode main plugin file
+ * Dark Mode main plugin file.
  *
  * @package      danieltj27/Dark-Mode
  * @author       Daniel James
@@ -14,13 +14,13 @@
  * Author: Daniel James
  * Author URI: https://www.danieltj.co.uk/
  * Text Domain: dark-mode
- * Version: 3.1
+ * Version: 3.2
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
 	die();
 }
 
-require __DIR__ . '/class-dark-mode.php';
+require dirname( __FILE__ ) . '/class-dark-mode.php';
 
 $dark_mode = new Dark_Mode();
