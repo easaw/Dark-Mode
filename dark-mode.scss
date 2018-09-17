@@ -2290,7 +2290,8 @@ body:not(.gutenberg-editor-page) {
 
 	}
 
-	.media-frame {
+	.media-frame,
+	.search-plugins {
 
 		input[type=text],
 		input[type=password],
