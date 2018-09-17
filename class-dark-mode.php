@@ -2,8 +2,14 @@
 /**
  * The core Dark Mode class.
  *
- * @package dark-mode
- * 
+ * @package danieltj27/Dark-Mode
+ */
+
+/**
+ * The core Dark Mode class.
+ *
+ * @package danieltj27/Dark-Mode
+ *
  * @since 3.0
  */
 class Dark_Mode {
@@ -244,15 +250,15 @@ class Dark_Mode {
 
 	/**
 	 * Add the Dark Mode class to the body tag.
-	 * 
+	 *
 	 * @since 3.1
-	 * 
+	 *
 	 * @param string $classes A string of class names.
-	 * 
+	 *
 	 * @return string $classes
 	 */
 	public static function add_body_class( $classes ) {
- 		// Has the user enabled Dark Mode?
+		// Has the user enabled Dark Mode?
 		if ( false !== self::is_using_dark_mode() ) {
 			// Add the body class.
 			$classes .= ' dark-mode ';
