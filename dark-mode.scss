@@ -2345,6 +2345,11 @@ body:not(.gutenberg-editor-page) {
 
 	}
 
+	hr {
+		border-color: $base-grey;
+		border-top-color: $ultra-grey;
+	}
+
 	::-webkit-input-placeholder,
 	::-moz-placeholder,
 	:-ms-input-placeholder,
