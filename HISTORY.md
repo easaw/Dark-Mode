@@ -1,20 +1,11 @@
-# Contribute to Dark Mode
+# History of Contributions
 
-Thank you to everyone who has contributed to Dark Mode!
+Thank you to each individual listed below who contributed to Dark Mode prior to version 4.0.
 
-## Get Involved
-
-Getting involved with the plugins development is crucial if it's ever going to make it into WordPress core. To do that, we need volunteers to help us out.
-
-Whether you're a developer with code, a designer with designs or someone with just a few ideas; anything is appreciated. To get started, create or respond to an existing issue and/or provide a pull request as anyone is welcome to help out where they can.
-
-## Thank You
-
-Thank you to the list of people below for helping with the project. Should you be listed here? If you think you should then please open a new issue on GitHub.
+People are listed in order of their first contribution.
 
 | Name                  | WordPress.org Username |
 |---------------------- |----------------------- |
-| Daniel James          | danieltj               |
 | munyagu               | munyagu                |
 | Mel Choyce            | melchoyce              |
 | Maja Benke            | travel_girl            |
@@ -28,3 +19,4 @@ Thank you to the list of people below for helping with the project. Should you b
 | Denis Žoljom          | dingo_bastard          |
 | YuanHao Chiang        | yuanhao                |
 | Lee Taylor            | leetaylor5455          |
+| Jory Hogeveen         | keraweb                |

@@ -1,26 +1,18 @@
 <?php
 /**
- * Dark Mode main plugin file.
- *
- * @package      danieltj27/Dark-Mode
- * @author       Daniel James
- * @copyright    2018 Daniel James
- * @license      GPL-2.0-or-later
- *
- * @wordpress-plugin
  * Plugin Name: Dark Mode
  * Plugin URI: https://wordpress.org/plugins/dark-mode/
- * Description: Lets your users make the WordPress admin dashboard darker.
+ * Version: 4.0
+ * Description: Dark Mode for the WordPress dashboard.
  * Author: Daniel James
- * Author URI: https://www.danieltj.co.uk/
+ * Author URI: https://danieltj.uk/
  * Text Domain: dark-mode
- * Version: 3.2
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
 	die();
 }
 
-require dirname( __FILE__ ) . '/class-dark-mode.php';
-
-$dark_mode = new Dark_Mode();
+/**
+ * @todo Lets start again... 🤪
+ */
