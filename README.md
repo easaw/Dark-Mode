@@ -17,7 +17,7 @@ In case you really like using this plugin and would like to support me, please c
 - [Download Plugin](https://wordpress.org/plugins/dark-mode/)
 - [Help with Translations](https://translate.wordpress.org/projects/wp-plugins/dark-mode)
 - [GitHub Repository](https://github.com/danieltj27/Dark-Mode)
-- [Personal Blog](https://danieltj.uk/)
+- [Me](https://danieltj.uk/)
 
 ### Licence
 
