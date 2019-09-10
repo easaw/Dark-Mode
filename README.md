@@ -1,6 +1,6 @@
 # Dark Mode
 
-**_## Update: I'm no longer able to maintain this plugin due to other commitments. If you'd be interested in taking it over, or know anyone who does, then please let me know. This includes this GitHub repo and the WordPress.org repository._**
+## Update: I'm no longer able to maintain this plugin due to other commitments. If you'd be interested in taking it over, or know anyone who does, then please let me know. This includes this GitHub repo and the WordPress.org repository.
 
 <hr>
 
