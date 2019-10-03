@@ -3,7 +3,7 @@
  * The core Dark Mode class.
  *
  * @package dark-mode
- * 
+ *
  * @since 3.0
  */
 class Dark_Mode {
@@ -120,10 +120,10 @@ class Dark_Mode {
 			 *
 			 * @return string $css_url
 			 */
-			$css_url = apply_filters( 'dark_mode_css', plugins_url( 'dark-mode' ) . '/dark-mode.css' );
+			$css_url = apply_filters( 'dark_mode_css', plugin_dir_url( __FILE__ ) . 'dark-mode.css' );
 
 			// Enqueue the stylesheet.
-			$ver = get_plugin_data( dirname(__FILE__) . '/dark-mode.php' )['Version'];
+			$ver = get_plugin_data( dirname( __FILE__ ) . '/dark-mode.php' )['Version'];
 			wp_enqueue_style( 'dark_mode', $css_url, array(), $ver );
 		}
 	}
@@ -185,7 +185,7 @@ class Dark_Mode {
 	 * @return void
 	 */
 	public static function save_profile_fields( $user_id ) {
-		if ( wp_verify_nonce( sanitize_key( $_POST['dark_mode_nonce'] ), 'dark_mode_nonce' ) ) {
+		if ( isset( $_POST['dark_mode_nonce'] ) && wp_verify_nonce( sanitize_key( $_POST['dark_mode_nonce'] ), 'dark_mode_nonce' ) ) {
 			// Set the option value.
 			$option = isset( $_POST['dark_mode'] ) ? 'on' : 'off';
 
@@ -239,15 +239,15 @@ class Dark_Mode {
 
 	/**
 	 * Add the Dark Mode class to the body tag.
-	 * 
+	 *
 	 * @since 3.1
-	 * 
+	 *
 	 * @param string $classes A string of class names.
-	 * 
+	 *
 	 * @return string $classes
 	 */
 	public static function add_body_class( $classes ) {
- 		// Has the user enabled Dark Mode?
+		// Has the user enabled Dark Mode?
 		if ( false !== self::is_using_dark_mode() ) {
 			// Add the body class.
 			$classes .= ' dark-mode ';

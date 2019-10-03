@@ -1,9 +1,9 @@
 === Dark Mode ===
-Contributors: dgwyer, danieltj, munyagu, travel_girl, melchoyce, afercia, hedgefield, megane9988, presskopp, willrad, loumray, bueltge, dingo_bastard, yuanhao, leetaylor5455
+Contributors: emrikol, danieltj, munyagu, travel_girl, melchoyce, afercia, hedgefield, megane9988, presskopp, willrad, loumray, bueltge, dingo_bastard, yuanhao, leetaylor5455
 Tags: dark, style, admin, dashboard, profile
 Requires at least: 4.0
-Tested up to: 4.9
-Stable tag: 3.2
+Tested up to: 5.2.3
+Stable tag: 3.2.1
 Requires PHP: 5.4
 License: GNU GPL v2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -16,13 +16,15 @@ This is a beta plugin that might one day be part of the WordPress core. Please d
 
 Using technology at night time can have a negative effect on your eyesight. Dark Mode will darken the colors of your admin dashboard making it easier for you to work at night.
 
-For information on the progress of this plugin, please refer to the [Trac ticket](https://core.trac.wordpress.org/ticket/41928) or you can get involved on the [GitHub repository](https://github.com/dgwyer/Dark-Mode).
+For information on the progress of this plugin, please refer to the [Trac ticket](https://core.trac.wordpress.org/ticket/41928) or you can get involved on the [GitHub repository](https://github.com/emrikol/Dark-Mode).
 
 = Developers =
 
-There are many hooks and filters available within the Dark Mode plugin which allow you to extend it's capabilities with small amounts of code. Please see the [GitHub wiki](https://github.com/dgwyer/Dark-Mode/wiki) pages for more information.
+There are many hooks and filters available within the Dark Mode plugin which allow you to extend it's capabilities with small amounts of code. Please see the [GitHub wiki](https://github.com/emrikol/Dark-Mode/wiki) pages for more information.
 
-To learn how you can make your own plugins compatible with Dark Mode, please read the [compatibility guide](https://github.com/dgwyer/Dark-Mode/wiki/Help:-Plugin-Compatibility-Guide) located on the GitHub Repository.
+To learn how you can make your own plugins compatible with Dark Mode, please read the [compatibility guide](https://github.com/emrikol/Dark-Mode/wiki/Help:-Plugin-Compatibility-Guide) located on the GitHub Repository.
+
+If you would like to contribute to the development of this plugin, please read [contributing.md](https://github.com/emrikol/Dark-Mode/blob/master/contributing.md)
 
 = Translators =
 
@@ -30,7 +32,7 @@ Whilst Dark Mode has been translated into a few different languages already, we 
 
 = Automatic Dark Mode =
 
-Automatic Dark Mode was removed from the plugin in version 2.0 but don't worry, it's still [available on GitHub](https://gist.github.com/danieltj27/8624d57c5e0f30465f963bc7838bbb7f) for those that want it back.
+Automatic Dark Mode was removed from the plugin in version 2.0 but don't worry, it's still [available on GitHub](https://github.com/emrikol/Dark-Mode/issues/153) for those that want it back.
 
 == Installation ==
 
@@ -50,7 +52,7 @@ Yes, the network administration areas have been styled accordingly to ensure a s
 
 = Can I set it to come on automatically? =
 
-Having Dark Mode come on automatically between certain times was a feature in this plugin that has since been removed as of version 2.0. Don't worry though, there is [a helper plugin](https://gist.github.com/danieltj27/8624d57c5e0f30465f963bc7838bbb7f) available which brings this functionality back.
+Having Dark Mode come on automatically between certain times was a feature in this plugin that has since been removed as of version 2.0. Don't worry though, there is [a helper plugin](https://github.com/emrikol/Dark-Mode/issues/153) available which brings this functionality back.
 
 = Why was the automatic feature removed? =
 
@@ -58,7 +60,7 @@ A lot more work was needed to ensure that it is stable, and it didn't fit in wit
 
 = Can I contribute to this plugin? =
 
-Yes, you can please open an [issue](https://github.com/dgwyer/Dark-Mode/issues) or submit a [pull request](https://github.com/dgwyer/Dark-Mode/pulls). All suggestions, feedback and code contributions are most welcome!
+Yes, you can please open an [issue](https://github.com/emrikol/Dark-Mode/issues) or submit a [pull request](https://github.com/emrikol/Dark-Mode/pulls). All suggestions, feedback and code contributions are most welcome!
 
 == Screenshots ==
 
@@ -71,9 +73,17 @@ Yes, you can please open an [issue](https://github.com/dgwyer/Dark-Mode/issues) 
 
 = Latest Changes =
 
-Refer to the [GitHub commit logs](https://github.com/dgwyer/Dark-Mode/commits) for more information regarding the latest changes.
+Refer to the [GitHub commit logs](https://github.com/emrikol/Dark-Mode/commits) for more information regarding the latest changes.
 
 = Version History =
+
+= 3.2.1 =
+
+* Styling: Fixed style issue with media uploads and site health dashboard.
+* Bugfix: Allow plugin to be installed in any directory, instead of forcing `dark-mode`
+* Misc: PHPCS coding style updates.
+* Misc: Removed unused CSS files.
+* Misc: Documentation updates.
 
 = 3.2 - March 15, 2019 =
 
