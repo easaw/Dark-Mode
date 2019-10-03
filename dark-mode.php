@@ -6,7 +6,7 @@
  * Author: David Gwyer
  * Author URI: https://www.wpgoplugins.com/
  * Text Domain: dark-mode
- * Version: 3.2
+ * Version: 3.2.1
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
