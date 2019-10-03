@@ -13,6 +13,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	die();
 }
 
-require( 'class-dark-mode.php' );
+require 'class-dark-mode.php';
 
 $dark_mode = new Dark_Mode();
