@@ -120,7 +120,7 @@ class Dark_Mode {
 			 *
 			 * @return string $css_url
 			 */
-			$css_url = apply_filters( 'dark_mode_css', plugins_url( 'dark-mode' ) . '/dark-mode.css' );
+			$css_url = apply_filters( 'dark_mode_css', plugin_dir_url( __FILE__ ) . 'dark-mode.css' );
 
 			// Enqueue the stylesheet.
 			$ver = get_plugin_data( dirname( __FILE__ ) . '/dark-mode.php' )['Version'];
