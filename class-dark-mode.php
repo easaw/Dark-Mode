@@ -21,7 +21,7 @@ class Dark_Mode {
 	 */
 	public function __construct() {
 		add_action( 'plugins_loaded', array( __CLASS__, 'load_text_domain' ), 10, 0 );
-		add_action( 'admin_enqueue_scripts', array( __CLASS__, 'load_dark_mode_css' ), 99, 0 );
+		add_action( 'wp_default_styles', array( __CLASS__, 'load_dark_mode_css' ), 99, 1 );
 		add_action( 'personal_options', array( __CLASS__, 'add_profile_fields' ), 10, 1 );
 		add_action( 'personal_options_update', array( __CLASS__, 'save_profile_fields' ), 10, 1 );
 		add_action( 'edit_user_profile_update', array( __CLASS__, 'save_profile_fields' ), 10, 1 );
@@ -94,7 +94,7 @@ class Dark_Mode {
 	 *
 	 * @return void
 	 */
-	public static function load_dark_mode_css() {
+	public static function load_dark_mode_css( &$styles ) {
 		// Has the user enabled Dark Mode?
 		if ( false !== self::is_using_dark_mode() ) {
 			$user_id = get_current_user_id();
@@ -120,11 +120,30 @@ class Dark_Mode {
 			 *
 			 * @return string $css_url
 			 */
-			$css_url = apply_filters( 'dark_mode_css', plugin_dir_url( __FILE__ ) . 'dark-mode.css' );
 
-			// Enqueue the stylesheet.
-			$ver = get_plugin_data( dirname( __FILE__ ) . '/dark-mode.php' )['Version'];
-			wp_enqueue_style( 'dark_mode', $css_url, array(), $ver );
+			$default_dark_styles = array(
+				'admin-menu' => 'css/wp-admin/admin-menu.css',
+				'common' => 'css/wp-admin/common.css',
+				'edit' => 'css/wp-admin/edit.css',
+				'dashboard' => 'css/wp-admin/dashboard.css',
+				'forms' => 'css/wp-admin/forms.css',
+				'media' => 'css/wp-admin/media.css',
+				'themes' => 'css/wp-admin/themes.css',
+				'widgets' => 'css/wp-admin/widgets.css',
+				'list-tables' => 'css/wp-admin/list-tables.css',
+				'buttons' => 'css/wp-includes/buttons.css',
+				'editor-buttons' => 'css/wp-includes/editor.css',
+				'media-views' => 'css/wp-includes/media-views.css',
+				'wp-pointer' => 'css/wp-includes/wp-pointer.css',
+			);
+
+			foreach ( $default_dark_styles as $slug => $path ) {
+				if ( isset( $styles->registered[ $slug ] ) && file_exists( plugin_dir_path( __FILE__ ) . $path ) ) {
+					// TODO: Add support for minified files when `SCRIPT_DEBUG` is false.
+					$styles->registered[ $slug ]->src = apply_filters( 'dark_mode_css', plugin_dir_url( __FILE__ ) . $path );
+				}
+			}
+
 		}
 	}
 
@@ -228,7 +247,7 @@ class Dark_Mode {
 		// Check Dark Mode is the next plugin.
 		if ( 'dark-mode/dark-mode.php' === $file ) {
 			// Create the feedback link.
-			$feedback_link = '<a href="https://github.com/dgwyer/Dark-Mode/issues" target="_blank">' . __( 'Feedback', 'dark-mode' ) . '</a>';
+			$feedback_link = '<a href="https://github.com/emrikol/Dark-Mode/issues" target="_blank">' . esc_html__( 'Feedback', 'dark-mode' ) . '</a>';
 
 			// Add the feedback link.
 			array_unshift( $links, $feedback_link );

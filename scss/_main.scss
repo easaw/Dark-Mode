@@ -1,0 +1,19 @@
+@use './core';
+
+// https://www.material.io/design/color/dark-theme.html
+
+$background: core.$color-ultra-dark-gray;
+$surface: core.$color-dark-gray;
+
+$dp0: $background;
+$dp1: $surface;
+$dp2: core.$color-base-gray;
+
+$textcolor-light: core.$textcolor-light;
+$textcolor-light-mid: core.$textcolor-light-mid;
+$color-medium-blue: core.$color-medium-blue;
+$color-wp-blue: core.$color-wp-blue;
+
+// admin-menu
+
+// common
